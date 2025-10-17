@@ -1,31 +1,31 @@
 # Causal Intervention for Defect Classification Robustness
 
-Overview
+# Overview
 This project integrates causal inference techniques with deep learning to enhance defect classification robustness under domain shifts and corrupted image conditions. By introducing causal intervention mechanisms into CNN based visual classifiers, the system mitigates spurious correlations and enforces domain invariant feature learning. This approach ensures reliable and interpretable defect detection across variable industrial environments.
 
-Framework
+# Framework
 Models: ResNet50, CNN (baseline), Causal Graph Encoder
 Libraries: PyTorch, DoWhy, CausalNex, NumPy, OpenCV, Matplotlib
 
-Scope
+# Scope
  Implement causal intervention on feature representations to suppress spurious correlations.
  Evaluate robustness under domain shift and noise perturbed settings.
  Compare standard CNN vs. causally adjusted CNN performance.
  Visualize causal effect strength using intervention based feature attribution.
  Analyze cross domain generalization metrics for industrial defect data.
 
-Dataset
+# Dataset
 Name: MVTec AD (Anomaly Detection Dataset)
 Link: [https://www.mvtec.com/company/research/datasets/mvtecad](https://www.mvtec.com/company/research/datasets/mvtecad)
 Description: Industrial anomaly detection dataset comprising 15 object and texture categories with pixellevel annotations.
 
-Preprocessing Steps:
+# Preprocessing Steps:
  Resized to 256×256 resolution.
  Applied Gaussian and salt-and-pepper noise for robustness testing.
  Normalized pixel intensity range to [0,1].
  Domain shift simulated via brightness and texture style variations.
-
- Methodology
+ 
+ # Methodology
 
  1. Data Loading & Preprocessing
 
@@ -78,31 +78,31 @@ Preprocessing Steps:
         │ Evaluation & Analysis │
         └────────────────────────┘
 
-Results
+# Results
 | Model                       | Clean Accuracy | Noisy Accuracy | Robustness Index | F1Score | AUROC     |
 | CNN (Baseline)              | 0.94           | 0.78           | 0.83             | 0.90     | 0.93     |
 | ResNet50 (Finetuned)        | 0.96           | 0.82           | 0.85             | 0.92     | 0.95     |
 | Causal Intervention CNN     | 0.95           | 0.90           | 0.95             | 0.94     | 0.97     |
 
-Qualitative Results:
+# Qualitative Results:
  Causally intervened models maintained high classification accuracy under brightness, rotation, and texture perturbations.
  Saliency maps indicated reduced attention bias toward noncausal background features.
 
-Conclusion
+# Conclusion
 The integration of causal inference into deep visual classifiers significantly improved model robustness, yielding a 15% increase in performance under domain shifts. This work validated that causal intervention effectively mitigates confounding factors, promoting stable generalization across unseen industrial conditions.
 Limitations: Computational overhead from causal effect estimation and sensitivity to graph design quality.
 
-Future Work
+# Future Work
  Extend to multimodal causal learning using image text data for defect reasoning.
  Apply interventional generative models (e.g., diffusion based counterfactual synthesis).
  Explore Realtime industrial deployment for adaptive inspection pipelines.
 
-References
+# References
 1. Schölkopf, B. et al. (2021). Toward Causal Representation Learning. Proceedings of the IEEE.
 2. Pearl, J. (2009). Causality: Models, Reasoning, and Inference. Cambridge University Press.
 3. MVTec AD Dataset (2019). Anomaly Detection Benchmark.
 4. DoWhy: Causal Inference in Python — Microsoft Research.
 
-Closest Research Paper:
+# Closest Research Paper:
 > “Causal Intervention for Robust Visual Representation Learning” — NeurIPS 2022.
 > This paper closely parallels the project’s methodology of employing causal mechanisms to improve CNN robustness against spurious correlations and distributional shifts.
