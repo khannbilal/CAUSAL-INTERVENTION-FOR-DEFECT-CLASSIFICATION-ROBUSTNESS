@@ -56,6 +56,7 @@ Description: Industrial anomaly detection dataset comprising 15 object and textu
  Causal Effect Strength (CES): ΔP(Y|do(X)) – ΔP(Y|X).
 
  6. Project Architecture Diagram (Textual)
+
         ┌────────────────────────┐
         │   Input Image (MVTec)  │
         └──────────┬─────────────┘
