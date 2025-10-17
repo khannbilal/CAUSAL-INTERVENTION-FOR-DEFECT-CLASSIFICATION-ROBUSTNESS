@@ -55,7 +55,7 @@ Description: Industrial anomaly detection dataset comprising 15 object and textu
  Robustness Index (RI): ratio of performance on shifted vs. clean data.
  Causal Effect Strength (CES): ΔP(Y|do(X)) – ΔP(Y|X).
 
- 6. Project Architecture Diagram (Textual)
+# Project Architecture Diagram (Textual)
 
         ┌────────────────────────┐
         │   Input Image (MVTec)  │
